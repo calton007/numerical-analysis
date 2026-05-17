@@ -21,7 +21,7 @@ def gauss2(f, a, b, e):
             break
         n += 1
         m *= 2
-    print result
+    print(result)
     return result[n]
 
 # 复合Gauss求积公式 #
@@ -40,7 +40,7 @@ def gauss1(f, a, b, e):
         if abs(result[m] - result[m - 1]) < e:
             break
         m += 1
-    print result
+    print(result)
     return result[m]
 
 
@@ -48,5 +48,5 @@ def fx(x):
     x2 = x**2 / 3.0  # x = x / math.sqrt(3)
     return 4.0/(1+x2)
 
-print gauss1(fx, 0, 2, 0.00001)
-print gauss2(fx, 0, 2, 0.00001)
+print(gauss1(fx, 0, 2, 0.00001))
+print(gauss2(fx, 0, 2, 0.00001))

@@ -13,12 +13,12 @@ def Grad(A, b, x, real):
         if abs(x[0, 0] - real[0, 0]) < 0.00001:
             break
         n += 1
-    print '迭代步数', n
-    print x
-A = np.mat('4 -1 0 -1 0 0;-1 4 -1 0 -1 0;0 -1 4 0 0 -1;-1 0 0 4 -1 0;0 -1 0 -1 4 -1;0 0 -1 0 -1 4', dtype=float)
-b = np.mat([[0, ], [5, ], [0, ], [6, ], [-2, ], [6, ]], dtype=float)
-x = np.mat([[0, ], [0, ], [0, ], [0, ], [0, ], [0, ]], dtype=float)
-real = np.mat([[1, ], [2, ], [1, ], [2, ], [1, ], [2, ]], dtype=float)
+    print('迭代步数', n)
+    print(x)
+A = np.matrix('4 -1 0 -1 0 0;-1 4 -1 0 -1 0;0 -1 4 0 0 -1;-1 0 0 4 -1 0;0 -1 0 -1 4 -1;0 0 -1 0 -1 4', dtype=float)
+b = np.matrix([[0, ], [5, ], [0, ], [6, ], [-2, ], [6, ]], dtype=float)
+x = np.matrix([[0, ], [0, ], [0, ], [0, ], [0, ], [0, ]], dtype=float)
+real = np.matrix([[1, ], [2, ], [1, ], [2, ], [1, ], [2, ]], dtype=float)
 Grad(A, b, x, real)
 
 

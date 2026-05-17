@@ -5,10 +5,10 @@ import numpy as np
 
 
 def gauss2(n):
-    print 'n =', n
-    A = np.mat(np.diag(3 * np.ones(n)) + np.diag(9 * np.ones(n-1), -1) + np.diag(1 * np.ones(n-1), 1), dtype=float)
-    x = np.mat(np.zeros(n), dtype=float).T
-    b = np.mat(13 * np.ones((n,1)), dtype=float)
+    print('n =', n)
+    A = np.matrix(np.diag(3 * np.ones(n)) + np.diag(9 * np.ones(n-1), -1) + np.diag(1 * np.ones(n-1), 1), dtype=float)
+    x = np.matrix(np.zeros(n), dtype=float).T
+    b = np.matrix(13 * np.ones((n,1)), dtype=float)
     b[0, 0] = 4
     b[n - 1, 0] = 12
     for i in range(0, n - 1):
@@ -21,7 +21,7 @@ def gauss2(n):
                 r = j
         # 换行
         if r != i:
-            temp = np.mat(A[i, :].tolist())
+            temp = np.matrix(A[i, :].tolist())
             A[i, :] = A[r, :]
             A[r, :] = temp
             b[i, 0],b[r, 0] = b[r, 0],b[i, 0]
@@ -38,7 +38,7 @@ def gauss2(n):
         for j in range(i + 1, n):
             sum = sum + A[i, j] * x[j, 0]
         x[i, 0] = (b[i, 0] - sum) / A[i, i]
-    print x
+    print(x)
 gauss2(10)
 gauss2(100)
 
